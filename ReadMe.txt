@@ -14,7 +14,6 @@ Installation de l'application depuis un environnement vierge :
 
 		- browser animations --> yes
 
-
 	- MapBox :
 
 		- npm install mapbox-gl --save
