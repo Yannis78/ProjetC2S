@@ -1,0 +1,85 @@
+<div class="header">
+    <h1 class="header-content">
+        <a [routerLink]="['/capteurs']">
+            <button mat-button style="background-color: transparent;"
+                matTooltip="Retour à la liste des capteurs">
+                <mat-icon style="margin-bottom: 12.5px; font-size: 30px;
+                    font-weight: 600;">navigate_before</mat-icon>
+            </button>
+        </a>
+        Liste des messages
+    </h1>
+</div>
+<div class="center">
+    <mat-card>
+        <mat-card-title>
+            Capteur F41
+        </mat-card-title>
+        <mat-card-content>
+            <br>
+            DevEui : &nbsp; 4883c7df30041f41 <br><br>
+            Mode : &nbsp; Vitesse de vibration
+        </mat-card-content>
+        <mat-card-actions>
+            <a [routerLink]="['/capteurs']">
+                <button mat-button><mat-icon>navigate_before</mat-icon>&nbsp;Liste
+                    des capteurs</button>
+            </a>
+        </mat-card-actions>
+    </mat-card>
+</div>
+<div class="center">
+    <table style="margin-bottom: 10px;">
+        <thead>
+            <tr class="table100-head">
+                <th class="column1">N° du message</th>
+                <th class="column2">Type</th>
+                <th class="column3">Heure d'envoi</th>
+                <th class="column4">Contenu</th>
+                <th class="column5">Mesure</th>
+                <th class="column6">Température</th>
+                <th class="column7">Batterie</th>
+                <th class="column8">Localisation</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let message of listmessagesF41">
+                <td class="column1">{{message.count}}</td>
+                <td class="column2">{{message.type}}</td>
+                <td class="column3">{{message.timestamp |
+                    date:'dd-MM-yyyy
+                    HH:mm:ss'}}</td>
+                <td class="column4">
+                    ({{message.payload_cleartext | slice:0:2}})
+                    ({{message.payload_cleartext | slice:2:4}})
+                    ({{message.payload_cleartext | slice:4:12}})
+                    ({{message.payload_cleartext | slice:12:20}})
+                    ({{message.payload_cleartext | slice:20:28}})
+                </td>
+                <td class="column5">
+                    x = {{message.payload_cleartext | slice:4:6 |
+                    hexToDec}}
+                    <hr>
+                    y = {{message.payload_cleartext | slice:12:14 |
+                    hexToDec}}
+                    <hr>
+                    z = {{message.payload_cleartext | slice:20:22 |
+                    hexToDec}}
+                </td>
+                <td class="column6">{{message.payload_cleartext |
+                    slice:0:2 | hexToDec}}°C</td>
+                <td class="column7">{{message.payload_cleartext |
+                    slice:2:4 | hexToDec}}%</td>
+                <td class="column8">
+                    <a
+                        href="http://www.google.com/maps/place/{{message.lat}},{{message.lng}}"
+                        target="_blank">
+                        <mat-icon>my_location</mat-icon>
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<app-footer></app-footer>

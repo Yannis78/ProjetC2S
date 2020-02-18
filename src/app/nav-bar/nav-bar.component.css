@@ -1,0 +1,33 @@
+.logo-nav {
+    -webkit-user-select: none;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    display: inline;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 36px;
+    margin-left: 0px;
+    margin-right: 4px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 35px;
+}
+
+.spacer {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+}
+
+.mat-toolbar {
+    background: rgb(144, 54, 170);
+    box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    color: white;
+}

@@ -1,0 +1,43 @@
+<mat-toolbar>
+    <mat-toolbar-row>
+        <a [routerLink]="['/capteurs']">
+            <img src="../../assets/img/internet.svg" alt="" class="logo-nav">
+            &nbsp;
+            <span>App Capteurs</span>
+        </a>
+        <span class="spacer"></span>
+        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="menu"
+            class="menu">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+            <a [routerLink]="['/capteurs']">
+                <button mat-menu-item>
+                    <mat-icon>format_list_numbered</mat-icon>
+                    <span>Liste des capteurs</span>
+                </button>
+            </a>
+            <button mat-menu-item [matMenuTriggerFor]="messages">
+                <mat-icon>format_list_numbered</mat-icon>
+                <span>Liste des messages</span>
+            </button>
+        </mat-menu>
+        <mat-menu #messages="matMenu">
+            <a [routerLink]="['/messages/C2S F41']">
+                <button mat-menu-item>
+                    <span>Liste des messages F41</span>
+                </button>
+            </a>
+            <a [routerLink]="['/messages/C2S F45']">
+                <button mat-menu-item>
+                    <span>Liste des messages F45</span>
+                </button>
+            </a>
+            <a [routerLink]="['/messages/C2S F46']">
+                <button mat-menu-item>
+                    <span>Liste des messages F46</span>
+                </button>
+            </a>
+        </mat-menu>
+    </mat-toolbar-row>
+</mat-toolbar>

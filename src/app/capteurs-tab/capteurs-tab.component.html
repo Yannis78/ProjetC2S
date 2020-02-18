@@ -1,0 +1,57 @@
+<div class="header">
+    <h1 class="header-content">
+        Liste des capteurs
+    </h1>
+</div>
+
+<!--<div class="center">
+    <mat-card>
+        <mat-card-title>
+            Liste des capteurs Objenious
+        </mat-card-title>
+        <mat-card-content>
+        </mat-card-content>
+        <mat-card-actions>
+            <a [routerLink]="['/messages']"><button mat-button>Liste des messages<mat-icon>navigate_next</mat-icon></button></a>
+        </mat-card-actions>
+    </mat-card>
+</div>-->
+
+<div class="center" style="margin-bottom: 90px; margin-top: 133px;">
+    <table>
+        <thead>
+            <tr class="table100-head">
+                <th class="column1">ID</th>
+                <th class="column2">Label</th>
+                <th class="column3">DevEui</th>
+                <th class="column4">Groupe</th>
+                <th class="column5">Status</th>
+                <th class="column6">Détails</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let device of listdevices">
+                <td class="column1">{{device.id}}</td>
+                <td class="column2">{{device.label}}</td>
+                <td class="column3">{{device.properties.deveui}}</td>
+                <td class="column4">{{device.group.id}}</td>
+                <td class="column5">{{device.status}}</td>
+                <td class="column6">
+                    <a [routerLink]="['/messages', device.label]">
+                        <mat-icon>visibility</mat-icon>
+                    </a>
+                    &nbsp;
+                    <a [routerLink]="['/map']">
+                        <mat-icon>place</mat-icon>
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="fake-space">
+    <br>
+</div>
+
+<app-footer></app-footer>

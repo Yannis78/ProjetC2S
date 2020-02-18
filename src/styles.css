@@ -1,1 +1,114 @@
-/* You can add global styles to this file, and also import other style files */
+@import "@angular/material/prebuilt-themes/purple-green.css";
+@font-face {
+    font-family: OpenSans-Regular;
+    src: url('./assets/fonts/OpenSans/OpenSans-Regular.ttf');
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body, html {
+    background: rgb(48, 48, 48);
+    -webkit-overflow-scrolling: touch;
+    overflow-x: hidden;
+}
+
+html, body {
+    height: 100%;
+}
+
+::selection {
+    background: rgb(144, 54, 170);
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* HEADER */
+
+.header {
+    width: 100%;
+    height: 15%;
+    background: rgb(144, 54, 170);
+}
+
+.header-content {
+    font-weight: 300;
+    padding: 82px 8px;
+    color: white;
+    display: block;
+    font-size: 25px;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    position: relative;
+    z-index: 1;
+    box-sizing: border-box;
+    -webkit-overflow-scrolling: touch;
+    display: block;
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 500px) {
+    .header {
+        height: 22%;
+    }
+}
+
+@media only screen and (max-width: 340px) {
+    .header {
+        height: 22%;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    .header {
+        height: 22%;
+    }
+}
+
+@media only screen and (max-width: 1139px) {
+    .header {
+        height: 22%;
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    .header {
+        height: 22%;
+    }
+}
+
+/* FIN HEADER */
+
+hr {
+    border: none;
+}
+
+.mat-card {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 58.2%;
+    background: rgb(66, 66, 66);
+}
+
+#map {
+    margin-top: 20px;
+    height: 500px;
+    width: 58.2%;
+}
