@@ -4,25 +4,12 @@
     </h1>
 </div>
 
-<!--<div class="center">
-    <mat-card>
-        <mat-card-title>
-            Liste des capteurs Objenious
-        </mat-card-title>
-        <mat-card-content>
-        </mat-card-content>
-        <mat-card-actions>
-            <a [routerLink]="['/messages']"><button mat-button>Liste des messages<mat-icon>navigate_next</mat-icon></button></a>
-        </mat-card-actions>
-    </mat-card>
-</div>-->
-
-<div class="center" style="margin-bottom: 90px; margin-top: 133px;">
+<div class="center" style="margin-bottom: 95px; margin-top: 138px;">
     <table>
         <thead>
             <tr class="table100-head">
-                <th class="column1">ID</th>
                 <th class="column2">Label</th>
+                <th class="column1">ID</th>
                 <th class="column3">DevEui</th>
                 <th class="column4">Groupe</th>
                 <th class="column5">Status</th>
@@ -31,8 +18,8 @@
         </thead>
         <tbody>
             <tr *ngFor="let device of listdevices">
-                <td class="column1">{{device.id}}</td>
                 <td class="column2">{{device.label}}</td>
+                <td class="column1">{{device.id}}</td>
                 <td class="column3">{{device.properties.deveui}}</td>
                 <td class="column4">{{device.group.id}}</td>
                 <td class="column5">{{device.status}}</td>
@@ -54,4 +41,4 @@
     <br>
 </div>
 
-<app-footer></app-footer>
+<app-footer></app-footer>>

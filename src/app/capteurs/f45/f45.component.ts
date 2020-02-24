@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from '../services/api.service';
-import { Messages } from '../classes/messages';
+import { ApiService } from '../../services/api.service';
+import { Messages } from '../../classes/messages';
 
 @Component({
   selector: 'app-f45',
@@ -14,7 +14,7 @@ export class F45Component implements OnInit {
   listmessagesF45: Messages[];
   
   ngOnInit() {
-    this._apiService.getmessagesF41()
+    this._apiService.getmessagesF45()
       .subscribe(
         data => {
           this.listmessagesF45 = data['messages'];

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Device } from '../classes/devices';
-import { ApiService } from '../services/api.service';         
+import { Device } from '../../classes/devices';
+import { ApiService } from '../../services/api.service';         
 
 @Component({
   selector: 'app-capteurs-tab',

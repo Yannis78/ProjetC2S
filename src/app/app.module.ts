@@ -5,17 +5,17 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 import { ApiService } from './services/api.service';
-import { CapteursTabComponent } from './capteurs-tab/capteurs-tab.component';
+import { CapteursTabComponent } from '../app/capteurs/capteurs-tab/capteurs-tab.component';
 import { MaterialModule } from './material/material.module';
-import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { NavBarComponent } from '../app/partials/nav-bar/nav-bar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FooterComponent } from './footer/footer.component';
+import { FooterComponent } from '../app/partials/footer/footer.component';
 import { HexToDec } from './parseInt.pipe';
 import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 import { MapComponent } from './map/map.component';
-import { F41Component } from './f41/f41.component';
-import { F45Component } from './f45/f45.component';
-import { F46Component } from './f46/f46.component';
+import { F41Component } from '../app/capteurs/f41/f41.component';
+import { F45Component } from '../app/capteurs/f45/f45.component';
+import { F46Component } from '../app/capteurs/f46/f46.component';
 
 @NgModule({
   declarations: [

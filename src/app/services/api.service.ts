@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Device } from '../classes/devices';
-
 
 @Injectable()
 export class ApiService {
@@ -11,13 +9,13 @@ export class ApiService {
     private http: HttpClient
   ) { }
 
-  getdevices(): Observable<Device[]> {
+  getdevices(): Observable<any> {
     const header = {
       headers: new HttpHeaders({
         'apikey': 'wjI+OFmZxYnHqm0hUh+nEt24x+SX63kwED/aQrRo5S8='
       })
     };
-    return this.http.get<Device[]>("https://api.objenious.com/v1/devices", header)
+    return this.http.get<any>("https://api.objenious.com/v1/devices", header)
   }
 
   getmessagesF46(): Observable<any> {

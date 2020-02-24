@@ -23,6 +23,7 @@
     "@angular/router": "~9.0.1",
     "@asymmetrik/ngx-leaflet": "^6.0.1",
     "@service-work/is-loading": "^3.0.2",
+    "@turf/along": "^6.0.1",
     "@types/googlemaps": "^3.39.2",
     "@types/mapbox-gl": "^1.7.0",
     "angular-google-maps": "^2.4.1",

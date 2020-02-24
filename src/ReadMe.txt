@@ -1,8 +1,15 @@
 Installation de l'application depuis un environnement vierge :
 
-1/ Remplacer le dossier "src" vierge par le dossier "src" de l'application à installer.
 
-2/ Importations des modules nécessaires :
+1/ Créer un projet vierge :
+
+	- ng new NomDuProjet
+
+
+2/ Remplacer le dossier "src" vierge par le dossier "src" de l'application à installer.
+
+
+3/ Importations des modules nécessaires :
 
 	- Angular material :
 
@@ -30,7 +37,8 @@ Installation de l'application depuis un environnement vierge :
 
 	- GoogleMapsApi :
 
-		- ng new ng-maps
-
 		- npm install --save @types/googlemaps
 
+	- Turf : 
+
+		- npm install @turf/along

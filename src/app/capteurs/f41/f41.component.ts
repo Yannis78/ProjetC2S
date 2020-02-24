@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from '../services/api.service';
-import { Messages } from '../classes/messages';
+import { ApiService } from '../../services/api.service';
+import { Messages } from '../../classes/messages';
 
 @Component({
   selector: 'app-f41',
