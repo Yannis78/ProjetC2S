@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as mapboxgl from 'mapbox-gl';
+import { MapService } from '../map.service';
 
 @Component({
   selector: 'app-map',
@@ -16,11 +17,12 @@ export class MapComponent implements OnInit {
     var map = new mapboxgl.Map({
       container: 'map',
       style: 'mapbox://styles/mapbox/dark-v10',
-      center: [2.0353911021865, 48.794867804003],
+      center: [2.0551832, 48.7858588],
       zoom: 13
     });
 
     map.on('load', function () {
+      var tabCoordonnees =  this.getLastCoordonnees();
       map.addSource('route', {
         'type': 'geojson',
         'data': {
@@ -28,17 +30,7 @@ export class MapComponent implements OnInit {
           'properties': {},
           'geometry': {
             'type': 'LineString',
-            'coordinates': [
-              [2.0353911021865, 48.794867804003],
-              [2.0353669092924, 48.787642494471],
-              [2.0353669092924, 48.787642494471],
-              [2.0662168304415, 48.773233220609],
-              [2.0361389066074, 48.794151067047],
-              [2.036494743122, 48.780728511341],
-              [2.0353669092924, 48.787642494471],
-              [2.0388954728581, 48.78152270965],
-              [2.0349402198548, 48.781590302501]
-            ]
+            'coordinates': tabCoordonnees
           }
         }
       });
@@ -55,7 +47,7 @@ export class MapComponent implements OnInit {
           'line-width': 5
         }
       });
-    });
+    }); 
 
   }
 
