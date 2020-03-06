@@ -193,4 +193,8 @@
     width: 58.2%;
     margin-bottom: 50px;
   }
-  
+
+  .go-top {
+    float: right;
+    margin-right: 30px;
+  }

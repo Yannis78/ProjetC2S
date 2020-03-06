@@ -38,7 +38,7 @@ a {
     align-items: center;
 }
 
-/* HEADER */
+/* Header */
 
 .header {
     width: 100%;
@@ -64,37 +64,13 @@ a {
     overflow: hidden;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 550px) {
     .header {
-        height: 22%;
+        height: 20%;
     }
 }
 
-@media only screen and (max-width: 340px) {
-    .header {
-        height: 22%;
-    }
-}
-
-@media only screen and (max-width: 950px) {
-    .header {
-        height: 22%;
-    }
-}
-
-@media only screen and (max-width: 1139px) {
-    .header {
-        height: 22%;
-    }
-}
-
-@media only screen and (max-width: 1280px) {
-    .header {
-        height: 22%;
-    }
-}
-
-/* FIN HEADER */
+/* Fin header */
 
 hr {
     border: none;
@@ -105,10 +81,4 @@ hr {
     margin-bottom: 50px;
     width: 58.2%;
     background: rgb(66, 66, 66);
-}
-
-#map {
-    margin-top: 20px;
-    height: 500px;
-    width: 58.2%;
 }
